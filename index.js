@@ -41,11 +41,13 @@ const promptUser = () => {
             type: 'list',
             name: 'license',
             message: 'What license would you like to use?',
+            choices: ['MIT', 'Apache', 'GPL', `BSD`],
         },
         {
             type: 'input',
             name: 'github',
             message: 'Enter your GitHub URL',
+           
         },
         {
             type: 'input',
