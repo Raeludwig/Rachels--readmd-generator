@@ -1,42 +1,53 @@
 <h1 align="center">
   <br>
   <br>
-  fds
+  
   <br>
 </h1>
 
-<h4 align="center">fds</h4>
+	
+[![License: MIT](https://img.shields.io/badge/license-MIT---blue.svg)](https://github.com/TechSmith/hyde/blob/master/LICENSE.txt)
+
+
+<h4 align="center"></h4>
 
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
+  <a href="#install">Install</a> •
+  <a href="#usage">Usage</a> •
   <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+  <a href="#contributors">Contributors</a>•
+  <a href="#license">License</a>•
+  <a href="#test">Test</a>•
+  <a href="#questions">Questions</a>•
 </p>
 
 
-## Key Features
-fds
+---
+
+## Usage
 
 
-## How To Use
+## Test
+undefined
 
-fsd
+## Install
 
 
 ## Credits
-fds
+
 
 
 ## License
-GPL
+MIT
 
 
----
 ## Contributors
 undefined
   
-  
+---  
 ## Questions
-<p> If you have any questions you can reach me at sfd, fds, or fds</p>
+Contact me for further questions:
+Email: 
+<br>
+Github: [](http://github.com/)

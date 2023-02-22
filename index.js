@@ -19,13 +19,13 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'keyFeatures',
-            message: 'Please enter key features.',
+            name: 'install',
+            message: 'Put install instructions here:',
         },
         {
             type: 'input',
-            name: 'howToUse',
-            message: 'What details would you like to add for how to use this repository?',
+            name: 'usage',
+            message: 'Enter any usage information here:',
         },
         {
             type: 'input',
@@ -45,24 +45,25 @@ const promptUser = () => {
         },
         {
             type: 'input',
+            name: 'tests',
+            message: 'Enter test information',
+
+        },
+        {
+            type: 'input',
             name: 'github',
-            message: 'Enter your GitHub URL',
-           
+            message: 'Enter your GitHub username? (without the @)',
+
         },
         {
             type: 'input',
             name: 'email',
             message: 'Enter your email address',
         },
-        {
-            type: 'input',
-            name: 'linkedin',
-            message: 'Enter your LinkedIn URL.',
-        },
     ]);
 };
 
-const generateReadMe = ({ title, description, keyFeatures,howToUse,credits, contributors,license,email,  github, linkedin }) =>
+const generateReadMe = ({ title, description, install, usage, credits, contributors, license, test, email, github }) =>
     `<h1 align="center">
   <br>
   <br>
@@ -70,25 +71,34 @@ const generateReadMe = ({ title, description, keyFeatures,howToUse,credits, cont
   <br>
 </h1>
 
+	
+[![License: ${license}](https://img.shields.io/badge/license-${license}---blue.svg)](https://github.com/TechSmith/hyde/blob/master/LICENSE.txt)
+
+
 <h4 align="center">${description}</h4>
 
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
+  <a href="#install">Install</a> •
+  <a href="#usage">Usage</a> •
   <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+  <a href="#contributors">Contributors</a>•
+  <a href="#license">License</a>•
+  <a href="#test">Test</a>•
+  <a href="#questions">Questions</a>•
 </p>
 
 
-## Key Features
-${keyFeatures}
+---
 
+## Usage
+${usage}
 
-## How To Use
+## Test
+${test}
 
-${howToUse}
-
+## Install
+${install}
 
 ## Credits
 ${credits}
@@ -98,24 +108,28 @@ ${credits}
 ${license}
 
 
----
 ## Contributors
 ${contributors}
   
-  
+---  
 ## Questions
-<p> If you have any questions you can reach me at ${email}, ${github}, or ${linkedin}</p>`
-  
+Contact me for further questions:
+<br>
+Email: ${email}
+<br>
+Github: [${github}](http://github.com/${github})`
+
 
 
 // Bonus using writeFileSync as a promise
 const init = () => {
-  promptUser()
-    // Use writeFile method imported from fs.promises to use promises instead of
-    // a callback function
-    .then((answers) => writeFile('readme.md', generateReadMe(answers)))
-    .then(() => console.log('Successfully wrote to readme.md'))
-    .catch((err) => console.error(err));
+    promptUser()
+        // Use writeFile method imported from fs.promises to use promises instead of
+        // a callback function
+        .then((answers) => writeFile('readme.md', generateReadMe(answers)))
+        .then(() => console.log('Successfully wrote to readme.md'))
+        .catch((err) => console.error(err));
 };
+
 
 init();
