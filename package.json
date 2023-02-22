@@ -1,0 +1,23 @@
+{
+  "name": "rachels--readmd-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raeludwig/Rachels--readmd-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raeludwig/Rachels--readmd-generator/issues"
+  },
+  "homepage": "https://github.com/Raeludwig/Rachels--readmd-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
